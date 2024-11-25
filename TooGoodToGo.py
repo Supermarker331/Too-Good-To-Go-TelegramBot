@@ -101,7 +101,6 @@ class TooGoodToGo:
             user_credentials = self.find_credentials_by_telegramUserID(user_id)
             self.client = TgtgClient(access_token=user_credentials["access_token"],
                                      refresh_token=user_credentials["refresh_token"],
-                                     user_id=user_credentials["user_id"],
                                      cookie=user_credentials["cookie"])
             self.connected_clients[user_id] = self.client
             time.sleep(3)
